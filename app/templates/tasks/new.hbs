@@ -1,0 +1,7 @@
+{{input type='text' value=title action='submitForm' autofocus='autofocus'}}
+{{color-picker value=color}}
+{{textarea value=description}}
+
+{{#if canCreateTask}}
+  <button {{action 'submitForm'}}>Create task</button>
+{{/if}}

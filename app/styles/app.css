@@ -1,0 +1,17 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+/*
+@keyframes domChanged { from { background: yellow; } }
+@-webkit-keyframes domChanged { from { background: yellow; } }
+.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+*/
+
+.task { border-top: 1px solid gray; }
+.task.saving { opacity: 0.5; }
+.color { width: 20px; height: 20px; display: inline-block; box-sizing: border-box; border: 1px solid gray; }
+
+.color-picker { position: relative; }
+.color-picker .available-colors { left: 25px; top: 0; width: 60px; position: absolute; }
+.color-picker .available-colors a { float: left; }

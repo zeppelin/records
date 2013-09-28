@@ -1,0 +1,9 @@
+{{color-item didSelect='toggleChooser' value=value class="selected-color"}}
+
+{{#if isExpanded}}
+  <div class="available-colors">
+    {{#each colors}}
+      {{color-item didSelect='didSelect' value=this}}
+    {{/each}}
+  </div>
+{{/if}}

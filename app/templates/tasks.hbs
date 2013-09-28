@@ -1,0 +1,27 @@
+{{render 'tasks.new'}}
+
+<hr>
+Search: {{color-picker value=searchTerm}}
+{{#if shouldShowClearSearch}}
+  <button {{action 'clearSearch'}}>Clear Search</button>
+{{/if}}
+<hr>
+
+<ul>
+  {{#each filteredContent itemController='task_item'}}
+    <li {{bind-attr class='isSaving:saving :task'}}>
+      <h3>
+        {{title}}
+        {{#if isDone}}&#10004;{{/if}}
+        {{color-picker value=color}}
+      </h3>
+
+      {{input type='checkbox' checked=isDone}}
+      <button {{action 'deleteTask' this}}>Delete</button>
+
+      {{#if description}}
+        <p>{{description}}</p>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
